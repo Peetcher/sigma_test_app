@@ -15,10 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from sigma_filter import views
+from sigma_filter.views import Sigma_filter
 from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index', views.index),
-    path('sigma_filter', views.sigma_filter),
+    #path('sigma_filter', views.sigma_filter),
+    path('sigma_filter', Sigma_filter.as_view()),
 ]
