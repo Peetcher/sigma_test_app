@@ -15,11 +15,11 @@ def select_range(dataset, date_from, date_to):
 
         if start_index is None:
             if date >= date_from:
-                start_index = index - 1
+                start_index = index
 
         if stop_index is None:
             if date >= date_to:
-                stop_index = index + 1
+                stop_index = index
 
     dataset = dataset[start_index:stop_index]
 
